@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import Calender from './components/Calender'
+import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Months from './components/Months'
+import { RecoilRoot } from 'recoil'
+import MyNfts from './Pages/MyNfts'
+import Profile from './Pages/Profile'
+import LandingPage from './Pages/LandingPage'
+import Merge from './Pages/Merge'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<RecoilRoot>
+			<Router>
+				<div className=' bg-black h-screen overflow-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white '>
+					<div className='max-w-6xl grid mx-auto'>
+						<NavBar />
+						<Switch>
+							<Route path='/select-date'>
+								<Calender />
+							</Route>
+							<Route path='/mynfts'>
+								<MyNfts />
+							</Route>
+							<Route path='/profile'>
+								<Profile />
+							</Route>
+							<Route path='/land'>
+								<LandingPage />
+							</Route>
+							<Route path='/merge'>
+								<Merge />
+							</Route>
+							<Route path='/'>
+								<Months />
+							</Route>
+						</Switch>
+					</div>
+				</div>
+			</Router>
+		</RecoilRoot>
+	)
 }
 
-export default App;
+export default App
