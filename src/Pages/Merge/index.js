@@ -5,6 +5,48 @@ function Merge({ date }) {
 	const [title, setTitle] = useState()
 	const [description, setDescription] = useState()
 	const [image, setImage] = useState()
+
+	const dragOver = (e) => {
+		e.preventDefault()
+	}
+
+	const dragEnter = (e) => {
+		e.preventDefault()
+	}
+
+	const dragLeave = (e) => {
+		e.preventDefault()
+	}
+
+	const fileDrop = (e, type) => {
+		e.preventDefault()
+		const droppedfile = e.dataTransfer.files
+		if (validFile(droppedfile[0])) {
+			setImage(URL.createObjectURL(droppedfile[0]))
+		} else {
+			console.log('Please select a vaid file')
+		}
+	}
+
+	const chooseFile = (e) => {
+		e.preventDefault()
+		const droppedfile = e.target.files
+
+		if (validFile(droppedfile[0])) {
+			setImage(URL.createObjectURL(droppedfile[0]))
+		} else {
+			console.log('Please select a vaid file')
+		}
+	}
+
+	const validFile = (file) => {
+		const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+		if (validTypes.indexOf(file.type) === -1) {
+			return false
+		}
+		return true
+	}
+
 	return (
 		<div className='text-white animate-fade-in my-6 grid grid-cols-3'>
 			{/* {!date && <Redirect to='/select-date' />} */}
@@ -19,7 +61,15 @@ function Merge({ date }) {
 					<span className='text-slate-400'>
 						Drag or choose your upload file
 					</span>
-					<input type='image' className='w-full h-52 ' />
+					<input
+						type='file'
+						className='w-full h-52 border-2'
+						onDragOver={dragOver}
+						onDragEnter={dragEnter}
+						onDragLeave={dragLeave}
+						onDrop={fileDrop}
+						onChange={chooseFile}
+					/>
 				</div>
 				<div className='flex flex-col mt-10 space-y-3'>
 					<span className=''>NFT Name</span>
@@ -30,6 +80,7 @@ function Merge({ date }) {
 						onChange={(e) => {
 							setTitle(e.target.value)
 						}}
+						maxLength={17}
 					/>
 				</div>
 				<div className='flex flex-col mt-10 space-y-3'>
@@ -47,13 +98,10 @@ function Merge({ date }) {
 			</div>
 
 			{/*Right Side */}
-			<div className='ml-8 pl-16 pr-5 flex flex-col justify-center space-y-3 mt-12 group mb-14'>
+			<div className='ml-8 pl-20 pr-5 flex flex-col justify-center space-y-3 mt-12 group mb-14'>
 				<span className='font-medium'>Preview Item</span>
 				<div className='border-2 w-full h-[85%] max-h-[27rem] relative'>
-					<img
-						src='https://images.unsplash.com/photo-1643819644517-9ea969675005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80'
-						className=' max-h-[80%] w-full'
-					/>
+					<img src={image} className=' max-h-[80%] w-full' />
 					<div className='desc bg-white h-[80%] absolute top-0 text-black'>
 						{/* hell */}
 					</div>

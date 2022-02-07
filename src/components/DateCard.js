@@ -52,11 +52,11 @@ function DateCard({ date, imgurl, owner, month, description, title }) {
 								{date}&nbsp;
 								{month}
 							</div>
-							<div className='text-white text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity delay-100'>
+							<div className='text-white text-[0.7rem] font-semibold opacity-0 group-hover:opacity-100 transition-opacity delay-100'>
 								{title}
 							</div>
 						</div>
-						<div className=' text-slate-400 text-xs font-thin'>
+						<div className=' text-slate-400 text-[0.6rem] font-thin'>
 							Owner:{owner}
 						</div>
 					</div>
