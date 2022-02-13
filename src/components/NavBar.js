@@ -59,19 +59,19 @@ function NavBar() {
 				</div>
 			</Link>
 			{/**List of nav */}
-			<div className='text-white flex items-center space-x-6'>
+			<div className='text-white md:flex items-center space-x-6 hidden'>
 				<Link to='/mynfts'>
 					<p className='cursor-pointer'>My NFTs</p>
 				</Link>
-				<Link to='/profile'>
-					<p className='cursor-pointer'>Profile</p>
+				<Link to='/months'>
+					<p className='cursor-pointer'>Get a date</p>
 				</Link>
 				<Link to={{ pathname: '/merge', date: true }}>
 					<p className='cursor-pointer'>Merge</p>
 				</Link>
 			</div>
 			{/**connect wallet */}
-			<div className=' grow flex justify-end'>
+			<div className=' grow md:flex justify-end hidden font-mono'>
 				{!currentAccount ? (
 					<button
 						className='btn p-3 font-semibold'

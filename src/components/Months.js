@@ -9,7 +9,7 @@ function Months() {
 		monthCardsArr.push(<MonthsCard month={allMonths[i]} i={i} key={i} />)
 	}
 	return (
-		<div className='text-white my-12 grid lg:grid-cols-4 gap-y-10 gap-x-20 md:grid-cols-2 mx-auto'>
+		<div className='text-white my-12 grid lg:grid-cols-4 gap-y-10 gap-x-20 md:grid-cols-2 mx-auto animate-fade-in'>
 			{monthCardsArr}
 		</div>
 	)

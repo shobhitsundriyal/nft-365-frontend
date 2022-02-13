@@ -9,4 +9,10 @@
 	.circle {
 		@apply border-[1px] border-black rounded-full flex items-center justify-center;
 	}
+	.inp {
+		@apply bg-black border-2 p-2 outline-none;
+	}
+	.hov {
+		@apply rounded-[7rem] hover:rounded-[0rem] hover:grayscale-0 transition-all duration-[300ms] grayscale p-[1px];
+	}
 }

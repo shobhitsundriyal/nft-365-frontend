@@ -16,10 +16,15 @@ module.exports = {
 		animation: {
 			'fade-in': 'fade-in 2s ',
 		},
+		fontFamily: {
+			mochi: "'Mochiy Pop One', 'sans-serif'",
+			popins: "'Poppins', 'sans-serif'",
+		},
 	},
 	plugins: [
 		require('tailwind-scrollbar-hide'),
 		require('tailwind-scrollbar'),
+		require('@tailwindcss/aspect-ratio'),
 	],
 	variants: {
 		scrollbar: ['rounded'],

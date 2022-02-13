@@ -17,7 +17,7 @@ function MonthsCard({ i, month }) {
 				<div className='bg-white h-1/2 rounded-t-full flex items-center justify-center '>
 					<img
 						src={circles}
-						className={` h-20 w-20`}
+						className={` h-20 w-20 rounded-full`}
 						style={{ transform: `rotate(${deg}deg)` }}
 					/>
 				</div>
