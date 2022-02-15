@@ -10,16 +10,36 @@ function AirdropSection() {
 			<form
 				onSubmit={(e) => {
 					e.preventDefault()
-					console.log(e.target[0].value, e.target[1].value)
+					console.log(
+						e.target[0].value,
+						e.target[1].value,
+						e.target[2].value,
+						e.target[3].value
+					)
 					e.target[0].value = ''
 					e.target[1].value = ''
+					e.target[2].value = ''
+					e.target[3].value = ''
 				}}
 			>
 				<div className='flex flex-col max-w-xl font-mono space-y-5 '>
 					<input
 						type='text'
 						className='inp'
+						placeholder='Your Name'
+						required
+					/>
+					<input
+						type='email'
+						className='inp'
+						placeholder='Your Email'
+						required
+					/>
+					<input
+						type='text'
+						className='inp'
 						placeholder='Your eth address'
+						required
 					/>
 					<input
 						type='date'

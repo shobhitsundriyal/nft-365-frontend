@@ -19,6 +19,8 @@ module.exports = {
 		fontFamily: {
 			mochi: "'Mochiy Pop One', 'sans-serif'",
 			popins: "'Poppins', 'sans-serif'",
+			play: "'Play', sans-serif",
+			rowdies: "'Rowdies', cursive",
 		},
 	},
 	plugins: [
@@ -28,5 +30,6 @@ module.exports = {
 	],
 	variants: {
 		scrollbar: ['rounded'],
+		extend: {},
 	},
 }

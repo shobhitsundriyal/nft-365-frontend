@@ -29,8 +29,12 @@ function App() {
 					href='https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital@1&display=swap'
 					rel='stylesheet'
 				></link>
+				<link
+					href='https://fonts.googleapis.com/css2?family=Play&family=Rowdies:wght@300&display=swap'
+					rel='stylesheet'
+				></link>
 				<div
-					className=' bg-black h-screen overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white scrollbar-thumb-rounded-full'
+					className=' bg-black h-screen overflow-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white scrollbar-thumb-rounded-full'
 					ref={ref}
 				>
 					<div className='max-w-6xl grid mx-auto'>

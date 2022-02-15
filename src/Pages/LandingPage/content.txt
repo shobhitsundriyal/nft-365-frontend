@@ -1,0 +1,9 @@
+UNDER THE HOOD:
+There are very few platforms that are using the concept of Dynamic NFTs. Ours is one of those few platforms that attempts to customize an NFT based on user preferences. 
+The old and the new NFT reside on IPFS and there's an on-chain updation of the tokenURI aspect as well. This ensures that all data is transparent and the system is decentralized in nature.  
+
+BRAND BOARD:
+
+The website for each year would be archived but would be viewable by others. The calendar for an year also acts as a "brand board" wherein - if you are an event organizer, you can mint the date of your event and then add additional details about the event to customize the date. 
+
+The brand board for the entire year would be visible on our platform. A great way to brand your event, isn't it?

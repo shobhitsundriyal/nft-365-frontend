@@ -50,16 +50,17 @@ function NavBar() {
 			console.log(err)
 		}
 	}
+
 	return (
 		<div className='bg-black p-6 rounded-b-md flex space-x-16 font-semibold'>
 			{/**Logo */}
 			<Link to='/'>
-				<div className='font-serif text-white cursor-pointer text-3xl font-extrabold'>
-					365Days
+				<div className='font-serif text-white cursor-pointer outline-none text-xl md:text-3xl font-extrabold'>
+					365W3<sup>✦</sup>
 				</div>
 			</Link>
-			{/**List of nav */}
-			<div className='text-white md:flex items-center space-x-6 hidden'>
+
+			{/* <div className='text-white md:flex items-center space-x-6 hidden'>
 				<Link to='/mynfts'>
 					<p className='cursor-pointer'>My NFTs</p>
 				</Link>
@@ -69,9 +70,9 @@ function NavBar() {
 				<Link to={{ pathname: '/merge', date: true }}>
 					<p className='cursor-pointer'>Merge</p>
 				</Link>
-			</div>
+			</div> */}
 			{/**connect wallet */}
-			<div className=' grow md:flex justify-end hidden font-mono'>
+			{/* <div className=' grow md:flex justify-end hidden font-mono'>
 				{!currentAccount ? (
 					<button
 						className='btn p-3 font-semibold'
@@ -84,6 +85,22 @@ function NavBar() {
 						Hi {currentAccount.substring(0, 8)}...
 					</span>
 				)}
+			</div> */}
+			<div className='text-white md:flex items-center space-x-6 hidden'>
+				<a href='/#about'>
+					<p className='cursor-pointer'>About</p>
+				</a>
+				<a href='/#roadmap'>
+					<p className='cursor-pointer'>Roadmap</p>
+				</a>
+				<a href='/#team'>
+					<p className='cursor-pointer'>Team</p>
+				</a>
+			</div>
+			<div className='flex grow md:flex justify-end font-mono'>
+				<a href='/#airdrop' className='btn sm:p-2 sm:font-semibold'>
+					Airdrop
+				</a>
 			</div>
 		</div>
 	)

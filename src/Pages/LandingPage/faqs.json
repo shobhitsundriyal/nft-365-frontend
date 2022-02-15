@@ -1,0 +1,40 @@
+{
+	"faqs": [
+		{
+			"q": "Where does my NFT go after I mint a date? (Where can I see my NFT after minting?)",
+			"a": "Your NFT date will appear in whatever address, or connected wallet, you used to mint the date. You can see your date on our website by clicking on my dates, or view it on OpenSea"
+		},
+		{
+			"q": "What is an NFT and how can I buy it?",
+			"a": "NFT stands for non-fungible token and it will be yours only as a unique digital asset that you can later sell for higher profits. To buy Calendar NFT, you will first have to buy some Ethereum which you can get via a FIAT on-ramp service like Coinbase or PayPal. From there you can transfer Ethereum you just bought to your MetaMask wallet and buy your first NFT. For more detailed tutorials you can use YouTube to search for how you can buy Ethereum."
+		},
+		{
+			"q": "When is the sale /drop date?",
+			"a": "TBD"
+		},
+		{
+			"q": "Is there an aftermarket?",
+			"a": "Yes! Announcement will be made soon."
+		},
+		{
+			"q": "How exclusive are they?",
+			"a": "Each date on calendar is one NFT making it truly unique!"
+		},
+		{
+			"q": "How many NFTs are available?  ",
+			"a": "There will be a total of 365 NFTs corresponding to each date of the year 2022"
+		},
+		{
+			"q": "How does the whitelist work?",
+			"a": "The whitelist link will be active from 16th February 8PM to 18th February 8PM. In that timeframe, you will be able to enter your Ethereum wallet address. To give everyone a fair chance, we let our software decide who will be able to mint. The lucky winners who will be contacted through email with a reservation of their date."
+		},
+		{
+			"q": "How can I use my NFT?",
+			"a": "You can mint and personalise a specific date for an event in your life, you can gift your nft and also sell"
+		},
+		{
+			"q": "Why is the Calendar NFT unique?",
+			"a": "You can personalise each NFT date with text/image "
+		}
+	]
+}
