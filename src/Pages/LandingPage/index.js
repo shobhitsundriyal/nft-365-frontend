@@ -5,8 +5,11 @@ import AirdropSection from './AirdropSection'
 import airdropIcon from '../../assets/airdrop.png'
 import FaqsAcc from './FaqsAcc' //componemt
 import FaqsData from './faqs.json'
+// import { useEffect, useRef } from 'react'
 
 function LandingPage() {
+	// const elementRef = useRef()
+	// useEffect(() => elementRef.current.scrollIntoView({ behavior: 'smooth' }))
 	return (
 		<>
 			<div className='text-white mt-10 px-3 md:px-2 lg:px-auto md:w-full w-auto'>
@@ -65,18 +68,18 @@ function LandingPage() {
 						</div>
 					</div>
 				</div>
-
 				{/* <div className='h-2 w-full mt-5'>
 					<Parallax translateX={[-5, 50]} opacity={[-0.2, 1]}>
 						<span className='-z-10'>365w3</span>
 					</Parallax>
 				</div> */}
-
 				{/* section 2  */}
+				<div id={'about'}></div> {/**to get to correct position*/}
 				<Parallax speed={20}>
 					<div
 						className='h-[120vh] border-y-2 border-white mt-8 grid grid-cols-2'
-						id='about'
+
+						// ref={elementRef}
 					>
 						<div className='grid grid-rows-2 mt-8'>
 							<div className='flex justify-center'>
@@ -116,7 +119,6 @@ function LandingPage() {
 						</div>
 					</div>
 				</Parallax>
-
 				{/* section 3 */}
 				<Parallax>
 					<div className=' bg-black space-y-24'>
@@ -150,13 +152,10 @@ function LandingPage() {
 						</div>
 					</div>
 				</Parallax>
-
 				{/* section roadmap */}
+				<div id={'roadmap'}></div>
 				<Parallax opacity={[0.5, 2]} speed={20}>
-					<div
-						className='flex flex-col h-screen z-10 bg-black border-y-2'
-						id={'roadmap'}
-					>
+					<div className='flex flex-col h-screen z-10 bg-black border-y-2'>
 						<div className='text-3xl font-popins font-extrabold'>
 							Roadmap
 						</div>
@@ -191,7 +190,6 @@ function LandingPage() {
 						</div>
 					</div>
 				</Parallax>
-
 				{/* section airdrop  */}
 				<Parallax opacity={[0, 2]} speed={-3}>
 					<div className='flex items-center' id='airdrop'>
@@ -208,7 +206,6 @@ function LandingPage() {
 						</div>
 					</div>
 				</Parallax>
-
 				{/* section team  */}
 				<Parallax opacity={[0.5, 2]}>
 					<div
@@ -271,7 +268,6 @@ function LandingPage() {
 						</div>
 					</div>
 				</Parallax>
-
 				{/* footer  */}
 				<div className='mb-10 border-t-2 mt-10 pt-5'>
 					<span className='text-2xl font-serif'>FAQs</span>
