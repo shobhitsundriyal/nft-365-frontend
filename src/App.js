@@ -39,7 +39,7 @@ function App() {
 				>
 					<div className='max-w-6xl grid mx-auto'>
 						<ParallaxProvider scrollContainer={scrollEl}>
-							<NavBar />
+							{/* <NavBar /> */}
 							<Switch>
 								<Route path='/select-date'>
 									<Calender />

@@ -5,13 +5,24 @@ import AirdropSection from './AirdropSection'
 import airdropIcon from '../../assets/airdrop.png'
 import FaqsAcc from './FaqsAcc' //componemt
 import FaqsData from './faqs.json'
-// import { useEffect, useRef } from 'react'
+import NavBar from '../../components/NavBar'
+import LandingNav from './LandingNav'
+import { useRef } from 'react'
 
 function LandingPage() {
-	// const elementRef = useRef()
-	// useEffect(() => elementRef.current.scrollIntoView({ behavior: 'smooth' }))
+	const aboutRef = useRef()
+	const roadmapRef = useRef()
+	const teamRef = useRef()
+	const airdropRef = useRef()
+
 	return (
 		<>
+			<LandingNav
+				aboutRef={aboutRef}
+				roadmapRef={roadmapRef}
+				teamRef={teamRef}
+				airdropRef={airdropRef}
+			/>
 			<div className='text-white mt-10 px-3 md:px-2 lg:px-auto md:w-full w-auto'>
 				{/* section 1 */}
 				<div className='flex'>
@@ -74,13 +85,10 @@ function LandingPage() {
 					</Parallax>
 				</div> */}
 				{/* section 2  */}
-				<div id={'about'}></div> {/**to get to correct position*/}
+				<div ref={aboutRef} className='mt-8'></div>{' '}
+				{/**to get to correct position coz not at exact position due to parallax*/}
 				<Parallax speed={20}>
-					<div
-						className='h-[120vh] border-y-2 border-white mt-8 grid grid-cols-2'
-
-						// ref={elementRef}
-					>
+					<div className='h-[120vh] border-y-2 border-white grid grid-cols-2'>
 						<div className='grid grid-rows-2 mt-8'>
 							<div className='flex justify-center'>
 								<MonthsCard month='MAR' />
@@ -153,7 +161,7 @@ function LandingPage() {
 					</div>
 				</Parallax>
 				{/* section roadmap */}
-				<div id={'roadmap'}></div>
+				<div ref={roadmapRef}></div>
 				<Parallax opacity={[0.5, 2]} speed={20}>
 					<div className='flex flex-col h-screen z-10 bg-black border-y-2'>
 						<div className='text-3xl font-popins font-extrabold'>
@@ -192,7 +200,7 @@ function LandingPage() {
 				</Parallax>
 				{/* section airdrop  */}
 				<Parallax opacity={[0, 2]} speed={-3}>
-					<div className='flex items-center' id='airdrop'>
+					<div className='flex items-center' ref={airdropRef}>
 						<div className='h-screen md:w-1/2 w-full flex flex-col justify-center'>
 							<AirdropSection />
 						</div>
@@ -210,7 +218,7 @@ function LandingPage() {
 				<Parallax opacity={[0.5, 2]}>
 					<div
 						className='flex h-fit min-h-screen z-10 bg-black flex-col items-center'
-						id={'team'}
+						ref={teamRef}
 					>
 						<div className='text-4xl font-popins'>Team Behind</div>
 						{/* team grid */}
