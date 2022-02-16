@@ -44,6 +44,7 @@ function AirdropSection() {
 					<input
 						type='date'
 						className='inp'
+						placeholder='Select Date'
 						min='2022-01-01'
 						max='2022-03-31'
 					/>

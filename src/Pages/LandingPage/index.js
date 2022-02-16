@@ -8,6 +8,7 @@ import FaqsData from './faqs.json'
 import NavBar from '../../components/NavBar'
 import LandingNav from './LandingNav'
 import { useRef } from 'react'
+import AboutSectionCard from './AboutSectionCard'
 
 function LandingPage() {
 	const aboutRef = useRef()
@@ -90,11 +91,11 @@ function LandingPage() {
 				<Parallax speed={20}>
 					<div className='h-[120vh] border-y-2 border-white grid grid-cols-2'>
 						<div className='grid grid-rows-2 mt-8'>
-							<div className='flex justify-center'>
-								<MonthsCard month='MAR' />
+							<div className='flex justify-center items-center'>
+								<AboutSectionCard />
 							</div>
 							<Parallax speed={2}>
-								<div className='md:text-2xl text-base font-play'>
+								<div className='md:text-2xl text-base font-play h-1/2'>
 									<div className='md:text-3xl text-lg font-mochi'>
 										Mint and Sell
 									</div>{' '}
@@ -108,7 +109,7 @@ function LandingPage() {
 						</div>
 
 						<div className='grid grid-rows-2 mt-5'>
-							<div className='md:text-2xl text-base font-play'>
+							<div className='md:text-2xl text-base font-play h-1/2'>
 								<div className='md:text-3xl text-lg font-mochi'>
 									Mint and Personalize
 								</div>{' '}
@@ -119,9 +120,14 @@ function LandingPage() {
 								until a certain date and unlock it after (a
 								sweet surprise for a loved one!)
 							</div>
-							<div className='flex justify-center'>
+							<div className='flex justify-center relative'>
 								<Parallax speed={8}>
-									<MonthsCard month='JUL' />
+									<AboutSectionCard
+										desc={
+											'Get a Pizza for free at my shop if you are HODLing ETH'
+										}
+										dayTitle={'BTC pizza Day'}
+									/>
 								</Parallax>
 							</div>
 						</div>
@@ -224,15 +230,18 @@ function LandingPage() {
 						{/* team grid */}
 						<div className='grid md:grid-cols-3 grid-cols-2 gap-x-6 md:gap-x-28 gap-y-6 mt-10'>
 							<div className=' max-h-60 border-2 hov aspect-1 group relative'>
-								<a
-									href='https://twitter.com/abhimore89'
-									target='_blank'
+								<div
+								// href='https://twitter.com/abhimore89'
+								// target='_blank'
 								>
 									<img
 										src='https://pbs.twimg.com/profile_images/1488828586387718149/D0pL1Fa-_400x400.jpg'
 										className='hov group-hover:rounded-[0rem] group-hover:grayscale-0'
 									/>
-								</a>
+									<div className='h-1/5 absolute bottom-0 w-[99%] bg-white border-black border-b-2 border-x-[1px] group-hover:opacity-100 group-hover:delay-[280ms] group-hover:duration-100 opacity-0'>
+										dsgf
+									</div>
+								</div>
 								<div className='absolute bottom-0 w-full h-1/3 opacity-80 group-hover:visible hidden duration-300 delay-1000 bg-slate-50'>
 									vdf
 								</div>
@@ -279,8 +288,8 @@ function LandingPage() {
 				{/* footer  */}
 				<div className='mb-10 border-t-2 mt-10 pt-5'>
 					<span className='text-2xl font-serif'>FAQs</span>
-					{FaqsData.faqs.map((item) => (
-						<FaqsAcc question={item.q} answer={item.a} />
+					{FaqsData.faqs.map((item, i) => (
+						<FaqsAcc question={item.q} answer={item.a} key={i} />
 					))}
 				</div>
 			</div>

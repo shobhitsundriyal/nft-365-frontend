@@ -8,7 +8,6 @@ function LandingNav({ aboutRef, roadmapRef, teamRef, airdropRef }) {
 		//expects ref
 		_ref.current.scrollIntoView({ behavior: 'smooth' })
 	}
-	console.log(aboutRef)
 	return (
 		<div className='bg-black p-6 rounded-b-md flex space-x-16 font-semibold'>
 			{/**Logo */}
