@@ -5,7 +5,7 @@ function AboutSectionCard({ desc, dayTitle }) {
 		<div className='aspect-[3/5] w-28 sm:w-44 lg:w-52 p-2'>
 			<div className='border-2 h-full relative'>
 				<div className='h-[78%] w-full absolute top-0 -z-10 bg-white font-mono text-black text-center my-auto items-center flex'>
-					<span className='text-sm leading-snug lg:text-xl px-2'>
+					<span className='text-[0.68rem] sm:text-sm leading-snug lg:text-xl px-2'>
 						{desc}
 					</span>
 				</div>
