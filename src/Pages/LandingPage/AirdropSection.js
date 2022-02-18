@@ -1,4 +1,4 @@
-import React from 'react'
+import axios from 'axios'
 
 function AirdropSection() {
 	return (
@@ -10,12 +10,17 @@ function AirdropSection() {
 			<form
 				onSubmit={(e) => {
 					e.preventDefault()
-					console.log(
-						e.target[0].value,
-						e.target[1].value,
-						e.target[2].value,
-						e.target[3].value
-					)
+					var data = {
+						ethAddress: e.target[0].value,
+						email: e.target[0].value,
+						name: e.target[0].value,
+						preferredDate: e.target[0].value,
+					}
+					// console.log(data)
+					axios
+						.post('https://api.365w3.xyz/api/AirDrops', data)
+						.then((res) => console.log(res))
+						.catch((err) => console.log(err))
 					e.target[0].value = ''
 					e.target[1].value = ''
 					e.target[2].value = ''
@@ -47,6 +52,7 @@ function AirdropSection() {
 						placeholder='Select Date'
 						min='2022-01-01'
 						max='2022-03-31'
+						style={{ webkitAppearance: 'none' }}
 					/>
 					<input
 						type='submit'

@@ -9,12 +9,17 @@ import NavBar from '../../components/NavBar'
 import LandingNav from './LandingNav'
 import { useRef } from 'react'
 import AboutSectionCard from './AboutSectionCard'
+import moment from 'moment'
 
 function LandingPage() {
 	const aboutRef = useRef()
 	const roadmapRef = useRef()
 	const teamRef = useRef()
 	const airdropRef = useRef()
+
+	var now = moment()
+	var end = moment('2022-02-26')
+	var duration = moment.duration(end.diff(now))
 
 	return (
 		<>
@@ -49,15 +54,15 @@ function LandingPage() {
 						<div>
 							Comming Soon
 							<Parallax opacity={[1.1, 0]}>
-								<div className='flex space-x-4 mt-3'>
+								<div className='flex space-x-4 mt-3 font-semibold'>
 									<div className='bg-white text-black p-3 rounded-2xl'>
-										04 D
+										{Math.floor(duration.asDays())} D
 									</div>
 									<div className='bg-white text-black p-3 rounded-2xl'>
-										19 H
+										{duration.hours()} H
 									</div>
 									<div className='bg-white text-black p-3 rounded-2xl'>
-										26 M
+										{duration.minutes()} M
 									</div>
 								</div>
 							</Parallax>
