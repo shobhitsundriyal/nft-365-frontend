@@ -5,7 +5,7 @@ import { Actions, getStateObject } from "../utils/stateobjecthelper";
 
 function NavBar() {
     const [state, dispatch] = useContext(AppContext);
-
+    const currentAccount = state.wallet;
     useEffect(() => {
         checkWallet();
     }, []);
