@@ -1,14 +1,18 @@
-import React from 'react'
-import CalHead from './CalHead'
-import DateArea from './DateArea'
+import React from "react";
+import CalHead from "./CalHead";
+import DateArea from "./DateArea";
+import NavBar from "./NavBar";
 
 function Calender() {
-	return (
-		<div className='my-3'>
-			<CalHead />
-			<DateArea />
-		</div>
-	)
+    return (
+        <>
+            <NavBar />
+            <div className="my-3">
+                <CalHead />
+                <DateArea />
+            </div>
+        </>
+    );
 }
 
-export default Calender
+export default Calender;

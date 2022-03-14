@@ -88,7 +88,7 @@ function NavBar() {
                 )}
             </div>
             <div className="text-white md:flex items-center space-x-6 hidden">
-                <a href="#about">
+                <a href="/#about">
                     <p className="cursor-pointer">About</p>
                 </a>
                 <a href="/#roadmap">
